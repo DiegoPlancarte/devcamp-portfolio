@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @posts = Blog.all
-    render json: @posts
+    @skills = Skill.all
   end
 
   def about
