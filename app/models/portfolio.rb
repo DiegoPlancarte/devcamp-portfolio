@@ -1,5 +1,11 @@
 class Portfolio < ApplicationRecord
+  # Sets relationship with other model
   has_many :technologies
+
+  # 
+  accepts_nested_attributes_for :technologies, 
+                                reject_if: lambda { |attr| attr['name'].blank? }
+
   # Imports placeholder.rb concern helper methods
   include Placeholder
 
@@ -14,6 +20,7 @@ class Portfolio < ApplicationRecord
   # Custom Scope : Option 2
   scope :ruby_on_rails_portfolio_items, -> {where(subtitle: 'Ruby on Rails')}
 
+  # Completes method after running 'new' method in controller file
   after_initialize :set_defaults
 
   # Setting default values: '||= value' used in order to not overwrite values and only replace nil values.
