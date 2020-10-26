@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  has_many :technologies
   # Imports placeholder.rb concern helper methods
   include Placeholder
 
