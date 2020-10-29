@@ -4,4 +4,7 @@ class ApplicationController < ActionController::Base
   
   # Imports SetSource methods from concern
   include SetSource
+  
+  # Imports CurrentUserConcern methods from concern
+  include CurrentUserConcern
 end
