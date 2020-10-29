@@ -1,10 +1,7 @@
 class ApplicationController < ActionController::Base
   # Imports DeviseWhitelist methods from concern
   include DeviseWhitelist
-
-  before_action :set_source
-
-  def set_source
-    session[:source] = params[:q] if params[:q]
-  end
+  
+  # Imports SetSource methods from concern
+  include SetSource
 end
