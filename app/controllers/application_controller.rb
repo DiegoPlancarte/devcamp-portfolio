@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   
   # Imports CurrentUserConcern methods from concern
   include CurrentUserConcern
+  
+  # Imports DefaultPageContent methods from concern
+  include DefaultPageContent
+
 end
