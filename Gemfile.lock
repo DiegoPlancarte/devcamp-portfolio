@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/DiegoPlancarte/planks_view_tool
+  revision: 7e331b57467d9b804cf1573afde4037751b7c6eb
+  specs:
+    planks_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -256,6 +262,7 @@ DEPENDENCIES
   listen (~> 3.2)
   ostruct (~> 0.1.0)
   pg (>= 0.18, < 2.0)
+  planks_view_tool!
   pry-byebug
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
