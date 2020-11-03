@@ -15,10 +15,9 @@
 
   <body>
     <%= render 'shared/portfolio_nav' %>
-
     <main role="main">
 
-      <%= render 'shared/portfolio_jumbotron'  %>
+      <%= render 'shared/portfolio_jumbotron' unless logged_in?(:site_admin) %>
 
       <%= yield %>
 
