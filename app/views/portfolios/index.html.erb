@@ -1,7 +1,9 @@
-<h1>Portfolio Item</h1>
-
-<%= link_to 'Create New Item', new_portfolio_path if logged_in?(:site_admin)  %>
-
-<%# Manuel Collection Partial Call: Tells Rails partial is going to use the 
-  collection of portfolio_items to complete render %> 
-<%= render partial: 'portfolio_item', collection: @portfolio_items %>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <%# Manuel Collection Partial Call: Tells Rails partial is going to use the 
+        collection of portfolio_items to complete render %> 
+      <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+    </div>
+  </div>
+</div>
