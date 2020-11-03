@@ -16,58 +16,18 @@
 
     <%= render 'shared/blog_nav' %>
 
-      <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-        <div class="col-md-6 px-0">
-          <h1 class="display-4 font-italic">My Blog</h1>
-          <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
-        </div>
-      </div>
-
-      <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-success">Design</strong>
-              <h3 class="mb-0">Post title</h3>
-              <div class="mb-1 text-muted">Nov 11</div>
-              <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= render 'shared/blog_masthead' %>
 
     <main role="main" class="container">
       <div class="row">
           
         <%= yield %>
-        
         <%= render 'shared/blog_sidebar' %>
-      </div>
-    </main>
 
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
-    <%= source_helper("blog") %>
+      </div>
+
+      <%= source_helper("blog") %>
+    </main>
+      <%= render 'shared/blog_footer' %>
   </body>
 </html>
