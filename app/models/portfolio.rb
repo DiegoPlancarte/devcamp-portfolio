@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  acts_as_list
   # Sets relationship with other model
   has_many :technologies
 

@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   
   # Create default routes for porfolios, except show
-  resources :portfolios, except: [:show]
+  resources :portfolios, except: [:show] do
+    member do
+      patch :move
+    end
+  end
   # Create custome show routes for portfolio
   get 'angular-items', to: 'portfolios#angular'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'

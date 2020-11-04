@@ -3,7 +3,6 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("jquery")
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
@@ -17,10 +16,11 @@ require ("packs/html.sortable")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-//= require jquery
-//= require bootstrap-sprockets
-//= require jquery_ujs
-//= require jquery-ui
-//= require html.sortable
-//= require turbolinks
-//= require_tree .
+import 'jquery-ui'
+
+$(
+        () => {
+                $('.sortable').sortable()
+        }
+)
+import "controllers"
