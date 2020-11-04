@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  acts_as_list
   # Sets relationship with other model
   has_many :technologies
 
@@ -15,6 +16,10 @@ class Portfolio < ApplicationRecord
   # Custom Scope : Option 1
   def self.angular
     where(subtitle: 'Angular')
+  end
+
+  def self.by_position
+    order("position ASC")
   end
 
   # Custom Scope : Option 2

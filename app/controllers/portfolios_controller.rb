@@ -1,10 +1,10 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
+  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy, :move]
   layout "portfolio"
-  access all: [:show, :index ,:angular], user: {except: [:new, :create, :update, :edit, :destroy]}, site_admin: :all
+  access all: [:show, :index ,:angular], user: {except: [:new, :create, :update, :edit, :destroy, :move]}, site_admin: :all
   
   def index
-    @portfolio_items = Portfolio.page(params[:page]).per(9)
+    @portfolio_items = Portfolio.by_position
   end
 
   def angular
@@ -47,6 +47,11 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Portfolio Item was successfully destroyed.' }
     end
+  end
+
+  def move
+    @portfolio_item.insert_at(params[:position].to_i)
+    head :ok
   end
 
   private
