@@ -59,3 +59,4 @@ gem 'acts_as_list', '~> 1.0', '>= 1.0.2'
 gem 'carrierwave-aws', '~> 1.5'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+gem "aws-sdk-s3", require: false

@@ -2,6 +2,7 @@ class Portfolio < ApplicationRecord
   acts_as_list
   # Sets relationship with other model
   has_many :technologies
+  has_one_attached :portfolio_image
 
   # 
   accepts_nested_attributes_for :technologies, 
@@ -15,6 +16,12 @@ class Portfolio < ApplicationRecord
 
   # Checks that values are present before saving instance to backend
   validates_presence_of :title, :body, :main_image, :thumb_image
+
+  def portfolio_image_url
+    if self.portfolio_image.attachment
+      self.portfolio_image.attachment.service_url
+    end
+  end
 
   # Custom Scope : Option 1
   def self.angular
