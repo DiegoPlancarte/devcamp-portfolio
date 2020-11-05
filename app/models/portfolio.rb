@@ -7,6 +7,9 @@ class Portfolio < ApplicationRecord
   accepts_nested_attributes_for :technologies, 
                                 reject_if: lambda { |attr| attr['name'].blank? }
 
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
   # Imports placeholder.rb concern helper methods
   include Placeholder
 
