@@ -2,7 +2,8 @@ class Portfolio < ApplicationRecord
   acts_as_list
   # Sets relationship with other model
   has_many :technologies
-  has_one_attached :portfolio_image
+  has_one_attached :portfolio_image, dependent: :destroy
+  # has_one :portfolio_image_blob, through: :portfolio_image_attachment
 
   # 
   accepts_nested_attributes_for :technologies, 
