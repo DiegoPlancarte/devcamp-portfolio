@@ -31,7 +31,7 @@ puts "5 skills created"
     subtitle: "My Great Service",
     body: "Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?",
     main_image: "https://via.placeholder.com/600x400",
-    thumb_image: "https://via.placeholder.com/350x200",
+    thumb_image: "https://via.placeholder.com/350x200"
   )
 end
 
@@ -41,7 +41,7 @@ end
     subtitle: "Angular",
     body: "Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?",
     main_image: "https://via.placeholder.com/600x400",
-    thumb_image: "https://via.placeholder.com/350x200",
+    thumb_image: "https://via.placeholder.com/350x200"
   )
 end
 
