@@ -2,6 +2,8 @@
   <div class="row">
     <div class="col-md-7">
       <%= image_tag @portfolio_item.main_image.to_s, width: '100%' %>
+      <%# image_tag @portfolio_item.portfolio_image.to_s, width: '100%' %>
+      <%= image_tag p_img(@portfolio_item.portfolio_image, 'port' ), width: '100%' %>
     </div>
     <div class="col-md-5">
       <h1><%= @portfolio_item.title%></h1>
